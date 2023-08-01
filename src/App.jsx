@@ -9,7 +9,7 @@ function App() {
     <Container maxW="620px">
       <Header />
       <Routes>
-        <Route path="/:username" element={<UserPage />} />
+        <Route path="/" element={<UserPage />} />
         <Route path="/:username/post/:id" element={<PostPageWrapper />} />
       </Routes>
     </Container>

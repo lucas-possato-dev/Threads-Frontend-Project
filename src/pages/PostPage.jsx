@@ -1,19 +1,20 @@
 import {
   Avatar,
   Box,
-  Button,
   Divider,
   Flex,
   Image,
   Text,
+  Button,
 } from "@chakra-ui/react";
 import { BsThreeDots } from "react-icons/bs";
 import Actions from "../components/Actions";
 import { useState } from "react";
 import Comment from "../components/Comment";
 
-const PostPage = () => {
+const PostPage = ({ post }) => {
   const [liked, setLiked] = useState(false);
+
   return (
     <>
       <Flex>
@@ -34,7 +35,7 @@ const PostPage = () => {
         </Flex>
       </Flex>
 
-      <Text my={3}>Let&apos;s talk about Threads.</Text>
+      <Text my={3}>{post.postTitle}</Text>
 
       <Box
         borderRadius={6}
@@ -42,7 +43,7 @@ const PostPage = () => {
         border={"1px solid"}
         borderColor={"gray.light"}
       >
-        <Image src={"/post1.png"} w={"full"} />
+        <Image src={post.postImg} w={"full"} />
       </Box>
 
       <Flex gap={3} my={3}>
@@ -51,11 +52,11 @@ const PostPage = () => {
 
       <Flex gap={2} alignItems={"center"}>
         <Text color={"gray.light"} fontSize={"sm"}>
-          238 replies
+          {post.replies} replies
         </Text>
         <Box w={0.5} h={0.5} borderRadius={"full"} bg={"gray.light"}></Box>
         <Text color={"gray.light"} fontSize={"sm"}>
-          {200 + (liked ? 1 : 0)} likes
+          {post.likes} likes
         </Text>
       </Flex>
       <Divider my={4} />

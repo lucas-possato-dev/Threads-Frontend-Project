@@ -6,18 +6,21 @@ const UserPage = () => {
     <>
       <UserHeader />
       <UserPost
+        postId={1}
         likes={"5K"}
         replies={866}
         postImg={"/post1.png"}
         postTitle={"Hello, world!"}
       />
       <UserPost
+        postId={2}
         likes={"5K"}
         replies={866}
         postImg={"/threads.png"}
         postTitle={"Let's talk about Threads."}
       />
       <UserPost
+        postId={3}
         likes={"5K"}
         replies={866}
         postImg={"/post3.png"}

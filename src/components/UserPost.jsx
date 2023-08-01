@@ -4,10 +4,10 @@ import { BsThreeDots } from "react-icons/bs";
 import Actions from "./Actions";
 import { useState } from "react";
 
-const UserPost = ({ likes, replies, postImg, postTitle }) => {
+const UserPost = ({ likes, replies, postImg, postTitle, postId }) => {
   const [liked, setLiked] = useState(false);
   return (
-    <Link to={"/markzuckerberg/post/1"}>
+    <Link to={`/markzuckerberg/post/${postId}`}>
       <Flex gap={3} mb={4} py={5}>
         <Flex flexDirection={"column"} alignItems={"center"}>
           <Avatar size="md" name="Mark Zuckerberg" src="/zuck-avatar.png" />
